@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondo"
+        android:gravity="center"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="39dp">
+
+        <EditText
+            android:id="@+id/Username"
+            android:layout_width="488dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="250dp"
+            android:autofillHints="Username"
+            android:drawableStart="@drawable/iconousuario"
+            android:drawablePadding="8dp"
+            android:hint="@string/username_hint"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="488dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_below="@id/Username"
+            android:layout_marginTop="5dp"
+            android:autofillHints="Password"
+            android:drawableStart="@drawable/iconoclave"
+            android:drawablePadding="8dp"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/loginbtn"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/Password"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:background="#000000"
+            android:text="@string/login"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/registroBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_below="@id/loginbtn"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/msjRegistro"
+            android:textColor="#04528E"
+            android:background="@android:color/transparent"
+            android:outlineProvider="background"
+            android:foreground="?android:attr/selectableItemBackground" />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

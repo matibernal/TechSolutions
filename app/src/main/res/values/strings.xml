@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">TechSolutions</string>
+    <string name="username_hint">Nombre de usuario</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="msjRegistro">¿No tienes cuenta? Regístrate</string>
+    <string name="ingresarApellido">Apellido</string>
+    <string name="descripcionIcono">Icono de una flecha para retroceder</string>
+    <string name="registro">REGISTRO</string>
+    <string name="nombre">Nombre</string>
+    <string name="usernameRegistro">Nombre de Usuario</string>
+    <string name="contraseñaRegistro">Contraseña</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="titulo">¡BIENVENIDO!</string>
+    <string name="subtitulo">¿Qué desea realizar?</string>
+    <string name="pedidos">Ver Pedidos</string>
+    <string name="reservarCita">Reservar Cita</string>
+    <string name="atencionCliente">Atención al Cliente</string>
+    <string name="titlePedido">PEDIDOS</string>
+    <string name="titleCitas">CITAS</string>
+    <string name="programarCita">PROGRAMAR CITA</string>
+    <string name="cancelarCita">CANCELAR CITA</string>
+    <string name="cambiarCita">CAMBIAR CITA</string>
+    <string name="titleAtencion">ATENCIÓN AL CLIENTE</string>
+    <string name="parrafoTexto">A continuación ingresá tus datos para realizar una consulta o solicitar información.
+        \nTe responderemos a la mayor brevedad posible.
+        \nNo dudes en comunicarte también por nuestra vía telefónica 12345678 de lunes a viernes de 8 ah 16:00hs</string>
+    <string name="name">Nombre</string>
+    <string name="surname">Apellido</string>
+    <string name="email">Email</string>
+    <string name="msj">Mensaje</string>
+    <string name="enviar">ENVIAR</string>
+    <string name="pedidosPI">Pedidos</string>
+    <string name="citas">Citas</string>
+    <string name="solicitudes">Solicitudes</string>
+    <string name="usuario1">USUARIO: A123</string>
+    <string name="editar1">Editar</string>
+    <string name="cancelar1">Cancelar</string>
+    <string name="usuario2">USUARIO: A124</string>
+    <string name="editar2">Editar</string>
+    <string name="cancelar2">Cancelar</string>
+    <string name="usuario3">USUARIO: A124</string>
+    <string name="editar3">Editar</string>
+    <string name="cancelar3">Cancelar</string>
+    <string name="usuario4">USUARIO: A124</string>
+    <string name="editar4">Editar</string>
+    <string name="cancelar4">Cancelar</string>
+    <string name="usuario5">USUARIO: A125</string>
+    <string name="editar5">Editar</string>
+    <string name="cancelar5">Cancelar</string>
+    <string name="verCita1">Ver Cita</string>
+    <string name="cancelarCita1">Cancelar Cita</string>
+    <string name="verCita2">Ver Cita</string>
+    <string name="cancelarCita2">Cancelar Cita</string>
+    <string name="verCita3">Ver Cita</string>
+    <string name="cancelarCita3">Cancelar Cita</string>
+    <string name="verCita4">Ver Cita</string>
+    <string name="cancelarCita4">Cancelar Cita</string>
+    <string name="verCita5">Ver Cita</string>
+    <string name="cancelarCita5">Cancelar Cita</string>
+    <string name="titleSolicitudes">SOLICITUDES</string>
+    <string name="verSolicitud1">Ver Solicitud</string>
+    <string name="verSolicitud2">Ver Solicitud</string>
+    <string name="verSolicitud3">Ver Solicitud</string>
+    <string name="verSolicitud4">Ver Solicitud</string>
+    <string name="verSolicitud5">Ver Solicitud</string>
+
+
+
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReservasUFActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondogeneral"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="-216dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/descripcionIcono"
+            android:padding="16dp"
+            android:src="@drawable/iconoflecha" />
+
+        <TextView
+            android:id="@+id/titleCitas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:text="@string/titleCitas"
+            android:textSize="30sp" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/titleCitas"
+            android:layout_marginTop="30dp"
+            android:background="@color/black" />
+
+
+        <Button
+            android:id="@+id/btnProgramarCita"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/actionModeBackground"
+            android:drawableLeft="@drawable/iconoreserva"
+            android:layout_below="@id/view"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="70dp"
+            android:padding="16dp"
+            android:text="@string/programarCita"
+            android:textAlignment="center"
+            tools:ignore="RtlHardcoded" />
+
+        <Button
+            android:id="@+id/btnCancelarCita"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/actionModeBackground"
+            android:drawableLeft="@drawable/iconocancelarcita"
+            android:layout_below="@id/btnProgramarCita"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="40dp"
+            android:padding="16dp"
+            android:text="@string/cancelarCita"
+            android:textAlignment="center"
+            tools:ignore="RtlHardcoded" />
+
+        <Button
+            android:id="@+id/btnCambiarCita"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/actionModeBackground"
+            android:drawableLeft="@drawable/iconoeditarcita"
+            android:layout_below="@id/btnCancelarCita"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="40dp"
+            android:padding="16dp"
+            android:text="@string/cambiarCita"
+            android:textAlignment="center"
+            tools:ignore="RtlHardcoded" />
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AtencionUFActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondogeneral"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="-216dp">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/descripcionIcono"
+        android:padding="16dp"
+        android:src="@drawable/iconoflecha" />
+
+    <TextView
+        android:id="@+id/titleAtencion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="@string/titleAtencion"
+        android:textSize="30sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/titleAtencion"
+        android:layout_marginTop="30dp"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/textoAtencion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:layout_marginTop="20dp"
+        android:text="@string/parrafoTexto"
+        android:textSize="18sp"
+        android:layout_marginBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="488dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/textoAtencion"
+            android:autofillHints="name"
+            android:drawablePadding="8dp"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:textColorHint="#83000000"/>
+        <EditText
+            android:id="@+id/surname"
+            android:layout_width="488dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/name"
+            android:autofillHints="name"
+            android:drawablePadding="8dp"
+            android:hint="@string/surname"
+            android:inputType="text"
+            android:textColorHint="#83000000"/>
+
+        <EditText
+            android:id="@+id/Email"
+            android:layout_width="488dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/surname"
+            android:autofillHints="name"
+            android:drawablePadding="8dp"
+            android:hint="@string/email"
+            android:inputType="text"
+            android:textColorHint="#83000000" />
+
+        <EditText
+            android:id="@+id/msj"
+            android:layout_width="488dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/Email"
+            android:autofillHints="name"
+            android:drawablePadding="8dp"
+            android:hint="@string/msj"
+            android:inputType="text"
+            android:gravity="start"
+            android:textColorHint="#83000000" />
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/msj"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:background="#000000"
+            android:text="@string/enviar"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
