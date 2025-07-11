@@ -10,6 +10,9 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,9 +50,33 @@ public class MainActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             FirebaseUser user = auth.getCurrentUser();
                             if (user != null && user.isEmailVerified()) {
-                                // Si el usuario está verificado, puede avanzar
-                                startActivity(new Intent(this, MenuUsuarioActivity.class));
-                                finish();
+                                // Busca si hay usuarios en Firebase
+                                FirebaseFirestore db = FirebaseFirestore.getInstance();
+                                db.collection("usuarios").document(user.getUid())
+                                        .get()
+                                        .addOnSuccessListener(documentSnapshot -> {
+                                            if (documentSnapshot.exists()) {
+                                                String nombre = documentSnapshot.getString("nombre");
+                                                if (nombre == null) nombre = "";
+                                                Toast.makeText(this,
+                                                        "Bienvenido, " + nombre + "!",
+                                                        Toast.LENGTH_LONG).show();
+                                            } else {
+                                                Toast.makeText(this,
+                                                        "Bienvenido!",
+                                                        Toast.LENGTH_LONG).show();
+                                            }
+                                            // Va al menu despues del saludito al usuario
+                                            startActivity(new Intent(this, MenuUsuarioActivity.class));
+                                            finish();
+                                        })
+                                        .addOnFailureListener(e -> {
+                                            Toast.makeText(this,
+                                                    "Bienvenido!",
+                                                    Toast.LENGTH_LONG).show();
+                                            startActivity(new Intent(this, MenuUsuarioActivity.class));
+                                            finish();
+                                        });
                             } else {
                                 Toast.makeText(this,
                                         "Verifica tu correo electrónico antes de iniciar sesión.",
