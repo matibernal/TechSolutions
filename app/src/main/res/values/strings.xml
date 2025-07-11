@@ -8,7 +8,7 @@
     <string name="descripcionIcono">Icono de una flecha para retroceder</string>
     <string name="registro">REGISTRO</string>
     <string name="nombre">Nombre</string>
-    <string name="usernameRegistro">Nombre de Usuario</string>
+    <string name="emailUsuario">Correo electrónico</string>
     <string name="contraseñaRegistro">Contraseña</string>
     <string name="aceptar">Aceptar</string>
     <string name="title_activity_main2">MainActivity2</string>

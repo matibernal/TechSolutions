@@ -44,7 +44,7 @@
             android:background="#000000" />
 
         <EditText
-            android:id="@+id/Nombre"
+            android:id="@+id/etNombre"
             android:layout_width="488dp"
             android:layout_height="48dp"
             android:layout_alignParentTop="true"
@@ -57,10 +57,10 @@
             android:textColorHint="#000000" />
 
         <EditText
-            android:id="@+id/Apellido"
+            android:id="@+id/etApellido"
             android:layout_width="488dp"
             android:layout_height="48dp"
-            android:layout_below="@id/Nombre"
+            android:layout_below="@id/etNombre"
             android:layout_marginTop="8dp"
             android:autofillHints="surname"
             android:drawableStart="@drawable/iconousuario"
@@ -70,23 +70,23 @@
             android:textColorHint="#000000" />
 
         <EditText
-            android:id="@+id/usernameRegistro"
+            android:id="@+id/etEmail"
             android:layout_width="488dp"
             android:layout_height="48dp"
-            android:layout_below="@id/Apellido"
+            android:layout_below="@id/etApellido"
             android:layout_marginTop="8dp"
             android:autofillHints="username"
             android:drawableStart="@drawable/iconousuario"
             android:drawablePadding="8dp"
-            android:hint="@string/usernameRegistro"
-            android:inputType="text"
+            android:hint="@string/emailUsuario"
+            android:inputType="textEmailAddress"
             android:textColorHint="#000000" />
 
         <EditText
-            android:id="@+id/passwordRegistro"
+            android:id="@+id/etPassword"
             android:layout_width="488dp"
             android:layout_height="48dp"
-            android:layout_below="@id/usernameRegistro"
+            android:layout_below="@id/etEmail"
             android:layout_marginTop="8dp"
             android:autofillHints="password"
             android:drawableStart="@drawable/iconoclave"
@@ -99,7 +99,7 @@
             android:id="@+id/btnAceptar"
             android:layout_width="150dp"
             android:layout_height="48dp"
-            android:layout_below="@id/passwordRegistro"
+            android:layout_below="@id/etPassword"
             android:layout_centerInParent="true"
             android:background="#000000"
             android:layout_marginTop="40dp"
