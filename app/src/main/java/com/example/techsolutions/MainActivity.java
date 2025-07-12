@@ -55,20 +55,35 @@ public class MainActivity extends AppCompatActivity {
                                 db.collection("usuarios").document(user.getUid())
                                         .get()
                                         .addOnSuccessListener(documentSnapshot -> {
+                                            String nombre = "";
                                             if (documentSnapshot.exists()) {
-                                                String nombre = documentSnapshot.getString("nombre");
+                                                nombre = documentSnapshot.getString("nombre");
                                                 if (nombre == null) nombre = "";
-                                                Toast.makeText(this,
-                                                        "Bienvenido, " + nombre + "!",
-                                                        Toast.LENGTH_LONG).show();
+                                                // Buscamos el rol del usuario, si encuentra es un admin
+                                                String rol = documentSnapshot.getString("rol");
+                                                if ("admin".equals(rol)) {
+                                                    Toast.makeText(this,
+                                                            "Bienvenido, admin " + nombre + "!",
+                                                            Toast.LENGTH_LONG).show();
+                                                    // Va al menú admin
+                                                    startActivity(new Intent(this, MenuPIActivity.class));
+                                                    finish();
+                                                } else {
+                                                    Toast.makeText(this,
+                                                            "Bienvenido, " + nombre + "!",
+                                                            Toast.LENGTH_LONG).show();
+                                                    // Va al menú normal
+                                                    startActivity(new Intent(this, MenuUsuarioActivity.class));
+                                                    finish();
+                                                }
                                             } else {
+                                                // Si el nombre no existe igual lo dejamos pasar como usuario común
                                                 Toast.makeText(this,
                                                         "Bienvenido!",
                                                         Toast.LENGTH_LONG).show();
+                                                startActivity(new Intent(this, MenuUsuarioActivity.class));
+                                                finish();
                                             }
-                                            // Va al menu despues del saludito al usuario
-                                            startActivity(new Intent(this, MenuUsuarioActivity.class));
-                                            finish();
                                         })
                                         .addOnFailureListener(e -> {
                                             Toast.makeText(this,
