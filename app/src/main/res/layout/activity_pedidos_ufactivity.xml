@@ -9,29 +9,27 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/fondogeneral"
-        android:padding="16dp"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="-216dp">
+        android:padding="16dp">
 
-    <ImageButton
-        android:id="@+id/btnBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/descripcionIcono"
-        android:padding="16dp"
-        android:src="@drawable/iconoflecha" />
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/descripcionIcono"
+            android:padding="16dp"
+            android:src="@drawable/iconoflecha" />
 
-    <TextView
-        android:id="@+id/titlePedidos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:text="@string/titlePedido"
-        android:textSize="24sp" />
+        <TextView
+            android:id="@+id/titlePedidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:text="@string/titlePedido"
+            android:textSize="24sp" />
 
         <View
             android:id="@+id/view"
@@ -41,7 +39,34 @@
             android:layout_marginTop="30dp"
             android:background="@color/black" />
 
-    </RelativeLayout>
+        <!--DESCRIPCIÓN DEL PEDIDO -->
+        <EditText
+            android:id="@+id/etDescripcionPedido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:layout_marginTop="32dp"
+            android:hint="Describí el arreglo a solicitar" />
 
+        <!-- BOTÓN ENVIAR PEDIDO -->
+        <Button
+            android:id="@+id/btnEnviarPedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etDescripcionPedido"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:text="Enviar" />
+
+        <!-- LISTA DE PEDIDOS -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPedidos"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/btnEnviarPedido"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
