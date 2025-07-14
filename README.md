@@ -54,12 +54,12 @@ bash
 
 3. **Conectar Firebase**
 
-  -El proyecto ya incluye integración con Firebase Auth y Firestore
-  - El proyecto ya incluye el archivo `google-services.json` necesario para conectar con Firebase, por lo que no es necesario configurarlo nuevamente. (Lo deje hasta que el profesor corrija el final y entregue la nota)
+      -El proyecto ya incluye integración con Firebase Auth y Firestore
+      -El proyecto ya incluye el archivo `google-services.json` necesario para conectar con Firebase, por lo que no es necesario configurarlo nuevamente. (Lo deje hasta que el profesor corrija el final y entregue la nota)
 
 4. **Correr la app**
 
-   -Ejecutar en emulador o dispositivo real Android API 29+ (SE RECOMIENDA UTILIZAR EL EMULADOR PIXEL 5 API 33)
+      -Ejecutar en emulador o dispositivo real Android API 29+ (SE RECOMIENDA UTILIZAR EL EMULADOR PIXEL 5 API 33)
 
 ## 🗂️ Estructura princiapl
 
