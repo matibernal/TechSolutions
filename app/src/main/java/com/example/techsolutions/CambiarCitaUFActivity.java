@@ -2,7 +2,9 @@ package com.example.techsolutions;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -26,6 +28,15 @@ public class CambiarCitaUFActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cambiar_cita_uf);
+
+        ImageButton btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(view -> {
+
+            Intent intent = new Intent(CambiarCitaUFActivity.this, ReservasUFActivity.class);
+            startActivity(intent);
+
+            finish();
+        });
 
         recyclerCitasCambiar = findViewById(R.id.recyclerCitasCambiar);
         recyclerCitasCambiar.setLayoutManager(new LinearLayoutManager(this));

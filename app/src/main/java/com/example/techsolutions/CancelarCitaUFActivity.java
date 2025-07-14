@@ -1,6 +1,8 @@
 package com.example.techsolutions;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -21,7 +23,16 @@ public class CancelarCitaUFActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cancelar_cita_uf); // crear este layout
+        setContentView(R.layout.activity_cancelar_cita_uf);
+
+        ImageButton btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(view -> {
+
+            Intent intent = new Intent(CancelarCitaUFActivity.this, ReservasUFActivity.class);
+            startActivity(intent);
+
+            finish();
+        });
 
         recyclerCitas = findViewById(R.id.recyclerCitas);
         recyclerCitas.setLayoutManager(new LinearLayoutManager(this));
@@ -47,7 +58,7 @@ public class CancelarCitaUFActivity extends AppCompatActivity {
                     for (DocumentSnapshot doc : queryDocumentSnapshots) {
                         Cita cita = doc.toObject(Cita.class);
                         if (cita != null) {
-                            cita.setId(doc.getId()); // Esto es CLAVE
+                            cita.setId(doc.getId());
                             listaCitas.add(cita);
                         }
                     }
