@@ -69,32 +69,32 @@ bash
 
 ## 💬 Atención al cliente (consultas)
 
-1. **Los usuarios pueden enviar un mensaje de contacto desde la app (nombre, apellido, email y mensaje)
-2. **Las consultas quedan guardadas en la colección "consultas" de Firestore
-3. **El personal interno(admin) puede ver todas las consultas desde la app, con detalles del usuario, mensaje y fecha.
+1. **Los usuarios pueden enviar un mensaje de contacto desde la app (nombre, apellido, email y mensaje)**
+2. **Las consultas quedan guardadas en la colección "consultas" de Firestore**
+3. **El personal interno(admin) puede ver todas las consultas desde la app, con detalles del usuario, mensaje y fecha.**
 
 ## 👨‍🏫 Acceso del profesor a la base de datos
 
--El profesor Sergio Medina fue agregado como "Lector" en el proyecto de Firebase, para poder visualizar todas las colecciones, datos y reglas de seguridad.
--Se le concedio acceso al email: "sergiod.medina@davinci.edu.ar"
+1. **El profesor Sergio Medina fue agregado como "Lector" en el proyecto de Firebase, para poder visualizar todas las colecciones, datos y reglas de seguridad.**
+2. **Se le concedio acceso al email: "sergiod.medina@davinci.edu.ar"**
 
-**Link directo al proyecto Firebase: https://console.firebase.google.com/project/techsolutions-bc434/overview
+**-Link directo al proyecto Firebase: "https://console.firebase.google.com/project/techsolutions-bc434/overview"**
 
 ## ⚙️ Notas y aclaraciones
 
-1. **Las reglas de Firestore estan configuradas para solo permitir accesso a usuarios autenticados.
-2. **El backend se encuentra completamente en Firebase
-3. **No se usan servicios pagos ni envío de mails externos: la comunicación admin-usuario queda dentro de la app y la base de datos
+1. **Las reglas de Firestore estan configuradas para solo permitir accesso a usuarios autenticados.**
+2. **El backend se encuentra completamente en Firebase**
+3. **No se usan servicios pagos ni envío de mails externos: la comunicación admin-usuario queda dentro de la app y la base de datos**
 
 ## 📈 Mejorar futuras (ideas para seguir la app)
 
--Envio de notificaciones automáticas a usuarios y admin
--Edición/borrado de consultas por parte de admin
--Integrar respuestas del admin a los mensajes de atención al cliente
--Exportar historial de pedidos/citas
+**-Envio de notificaciones automáticas a usuarios y admin**
+**-Edición/borrado de consultas por parte de admin**
+**-Integrar respuestas del admin a los mensajes de atención al cliente**
+**-Exportar historial de pedidos/citas**
 
-**Se intento implementar una integracion con SendGrid para envió de emails automáticos a los admins cuando un usuario enviaba una consulta
-**Sin embargo, la funcionalidad requería una cuenta paga, por lo que lo descarté para esta versión.
+**Se intento implementar una integracion con SendGrid para envió de emails automáticos a los admins cuando un usuario enviaba una consulta**
+**Sin embargo, la funcionalidad requería una cuenta paga, por lo que lo descarté para esta versión.**
 
 ## 🏷️ Autor
 **Matías Bernal**
