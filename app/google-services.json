@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "651620471095",
+    "project_id": "techsolutions-bc434",
+    "storage_bucket": "techsolutions-bc434.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651620471095:android:5cc26905237349af43cab2",
+        "android_client_info": {
+          "package_name": "com.example.techsolutions"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsLeIi-cHPEXNrkV9qgwUUzhx1XDMb_s4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
