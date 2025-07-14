@@ -1,32 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CitasPIActivity">
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/fondogeneral"
-        android:padding="16dp"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="-216dp">
+        android:padding="16dp">
 
         <ImageButton
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:background="@android:color/transparent"
             android:contentDescription="@string/descripcionIcono"
             android:padding="16dp"
             android:src="@drawable/iconoflecha" />
 
         <TextView
-            android:id="@+id/titlePedidos"
+            android:id="@+id/titleCitas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -38,173 +34,17 @@
             android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:layout_below="@id/titlePedidos"
+            android:layout_below="@id/titleCitas"
             android:layout_marginTop="30dp"
             android:background="@color/black" />
 
-        <LinearLayout
+        <!-- Muestra todas las citas -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCitasPI"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_height="0dp"
             android:layout_below="@id/view"
-            android:layout_marginTop="50dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp">
-
-                <TextView
-                    android:id="@+id/numeroUsuario1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/usuario1"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:textSize="16sp"/>
-
-                <Button
-                    android:id="@+id/btnVerCita1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/verCita1"
-                    tools:ignore="DuplicateSpeakableTextCheck" />
-
-                <Button
-                    android:id="@+id/btnCancelarCita1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:text="@string/cancelarCita1"
-                    tools:ignore="DuplicateSpeakableTextCheck" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:id="@+id/numeroUsuario2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/usuario2"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:textSize="16sp"/>
-
-                <Button
-                    android:id="@+id/btnVerCita2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/verCita2"
-                    android:layout_marginStart="10dp"/>
-
-                <Button
-                    android:id="@+id/btnCancelarCita2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cancelarCita2"
-                    android:layout_marginStart="5dp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:id="@+id/numeroUsuario3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/usuario3"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:textSize="16sp"/>
-
-                <Button
-                    android:id="@+id/btnverCita3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/verCita3"
-                    android:layout_marginStart="10dp"/>
-
-
-                <Button
-                    android:id="@+id/btnCancelarCita3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cancelarCita3"
-                    android:layout_marginStart="5dp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:id="@+id/numeroUsuario4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/usuario4"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:textSize="16sp"/>
-
-                <Button
-                    android:id="@+id/btnverCita4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/verCita4"
-                    android:layout_marginStart="10dp"/>
-
-                <Button
-                    android:id="@+id/btnCancelarCita4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cancelarCita4"
-                    android:layout_marginStart="5dp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:id="@+id/numeroUsuario5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/usuario5"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:textSize="16sp"/>
-
-                <Button
-                    android:id="@+id/btnverCita5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/verCita5"
-                    android:layout_marginStart="10dp"/>
-
-                <Button
-                    android:id="@+id/btnCancelarCita5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cancelarCita5"
-                    android:layout_marginStart="5dp"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
+            android:layout_marginTop="20dp"
+            android:layout_alignParentBottom="true" />
     </RelativeLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
