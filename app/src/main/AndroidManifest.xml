@@ -35,22 +35,20 @@
             android:name=".PedidosUFActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
-            android:exported="false"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/Theme.TechSolutions.NoActionBar" />
-        <activity
             android:name=".MenuUsuarioActivity"
             android:exported="false" />
         <activity
             android:name=".RegistroActivity"
             android:exported="false" />
         <activity
-            android:name=".MenuPersonalInternoActivity"
-            android:exported="false" />
+            android:name=".ProgramarCitaUFActivity"
+            android:exported="false"/>
         <activity
-            android:name=".UsuarioFinalActivity"
-            android:exported="false" />
+            android:name=".CancelarCitaUFActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".CambiarCitaUFActivity"
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
