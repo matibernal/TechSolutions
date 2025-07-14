@@ -1,178 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SolicitudesPIActivity">
-
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/fondogeneral"
-        android:padding="16dp"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="-216dp">
+        android:padding="16dp">
 
         <ImageButton
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:background="@android:color/transparent"
             android:contentDescription="@string/descripcionIcono"
-            android:padding="16dp"
+            android:padding="12dp"
             android:src="@drawable/iconoflecha" />
 
         <TextView
-            android:id="@+id/titleSolicitudes"
+            android:id="@+id/tvTituloSolicitudes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="80dp"
-            android:text="@string/titleSolicitudes"
-            android:textSize="24sp" />
+            android:layout_marginTop="64dp"
+            android:text="Solicitudes de Atención"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
 
-        <View
-            android:id="@+id/view"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerSolicitudes"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_below="@id/titleSolicitudes"
-            android:layout_marginTop="30dp"
-            android:background="@color/black" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_below="@id/view"
-            android:layout_marginTop="50dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp">
-
-                <TextView
-                    android:id="@+id/numeroUsuario1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/usuario1"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:textSize="20sp"/>
-
-                <Button
-                    android:id="@+id/btnVerSolicitud1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:text="@string/verSolicitud1"
-                    tools:ignore="DuplicateSpeakableTextCheck" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:id="@+id/numeroUsuario2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/usuario2"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:textSize="20sp"/>
-
-                <Button
-                    android:id="@+id/btnVerSolicitud2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/verSolicitud2"
-                    android:layout_marginStart="15dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:id="@+id/numeroUsuario3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/usuario2"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:textSize="20sp"/>
-
-                <Button
-                    android:id="@+id/btnVerSolicitud3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/verSolicitud3"
-                    android:layout_marginStart="15dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:id="@+id/numeroUsuario4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/usuario4"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:textSize="20sp"/>
-
-                <Button
-                    android:id="@+id/btnVerSolicitud4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/verSolicitud4"
-                    android:layout_marginStart="15dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:id="@+id/numeroUsuario5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/usuario5"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:textSize="20sp"/>
-
-                <Button
-                    android:id="@+id/btnVerSolicitud5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/verSolicitud5"
-                    android:layout_marginStart="15dp"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvTituloSolicitudes"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="8dp"/>
     </RelativeLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
