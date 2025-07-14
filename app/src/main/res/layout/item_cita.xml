@@ -1,0 +1,9 @@
+<!-- res/layout/item_cita.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="12dp">
+    <TextView android:id="@+id/tvMotivoCita" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Motivo"/>
+    <TextView android:id="@+id/tvFechaHoraCita" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fecha y hora"/>
+    <TextView android:id="@+id/tvEstadoCita" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Estado"/>
+    <Button android:id="@+id/btnCancelarCita" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cancelar" android:layout_marginTop="8dp"/>
+</LinearLayout>
