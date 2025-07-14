@@ -7,9 +7,47 @@
  * See a full list of supported triggers at https://firebase.google.com/docs/functions
  */
 
-const {setGlobalOptions} = require("firebase-functions");
-const {onRequest} = require("firebase-functions/https");
-const logger = require("firebase-functions/logger");
+const functions = require("firebase-functions");
+const admin = require("firebase-admin");
+const sgMail = require("@sendgrid/mail");
+
+admin.initializeApp();
+
+const SENDGRID_API_KEY = functions.config().sendgrid.key;
+sgMail.setApiKey(SENDGRID_API_KEY);
+
+exports.sendContactEmail = functions.https.onCall(async (data, context) => {
+  // Datos enviados desde la app
+  const { nombre, apellido, email, mensaje } = data;
+
+  // Correo al que le va a llegar (el admin)
+  const toAdmin = "matrekb@gmail.com"; // email del admin
+
+  const msg = {
+    to: toAdmin,
+    from: {
+      email: "matrekb@gmail.com", // El email verificado de SendGrid osea el sender
+      name: "TechSolutions Soporte"
+    },
+    subject: "Nueva consulta de contacto en TechSolutions",
+    html: `
+      <strong>Nombre:</strong> ${nombre}<br>
+      <strong>Apellido:</strong> ${apellido}<br>
+      <strong>Email:</strong> ${email}<br>
+      <strong>Mensaje:</strong><br>${mensaje}
+    `,
+  };
+
+  try {
+    await sgMail.send(msg);
+    return { success: true, message: "Mensaje enviado correctamente" };
+  } catch (error) {
+    console.error(error);
+    return { success: false, message: "Error al enviar el mensaje" };
+  }
+});
+
+
 
 // For cost control, you can set the maximum number of containers that can be
 // running at the same time. This helps mitigate the impact of unexpected
